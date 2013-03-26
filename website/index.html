@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>OkHttp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An HTTP+SPDY client for Android and Java applications.">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:regular,medium,thin,italic,mediumitalic,bold" rel="stylesheet" title="roboto">
+    <link href="static/bootstrap.min.css" rel="stylesheet">
+    <link href="static/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="static/prettify.css" rel="stylesheet">
+    <link href="static/app.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="span4 side">
+          <h1>OkHttp</h1>
+          <h2>An HTTP+SPDY client for Android<br/>and Java applications.</h2>
+          <p><a href="https://squareup.com/"><img src="static/square.png" alt="by Square, Inc."></a></p>
+        </div>
+        <div class="offset4 span8 main">
+          <div class="main-inner">
+            <h3 id="introduction">Introduction</h3>
+            <p>Lorem ipsum...</p>
+
+            <h3 id="download">Download</h3>
+            <p class="downloads">
+              <a href="http://repository.sonatype.org/service/local/artifact/maven/redirect?r=central-proxy&g=com.squareup&a=okhttp&v=LATEST" class="btn btn-large btn-inverse" id="download-btn">OkHttp JAR <span class="runner-version"></span></a>
+            </p>
+            <p>The source code to the client, samples, and this website is <a href="http://github.com/square/okhttp">available on GitHub</a>.</p>
+
+            <h4>Maven</h4>
+            <p>If you are using Maven for compilation you can declare the screenshot library as a dependency.</p>
+            <pre class="prettyprint">&lt;dependency>
+  &lt;groupId>com.squareup&lt;/groupId>
+  &lt;artifactId>okhttp&lt;/artifactId>
+  &lt;version><span class="version"><em>(insert latest version)</em></span>&lt;/version>
+&lt;/dependency></pre>
+
+            <h3 id="contributing">Contributing</h3>
+            <p>If you would like to contribute code to OkHttp you can do so through GitHub by forking the repository and sending a pull request.</p>
+            <p>When submitting code, please make every effort to follow existing conventions and style in order to keep the code as readable as possible. Please also make sure your code compiles by running <code>mvn clean verify</code>.
+            <p>Before your code can be accepted into the project you must also sign the <a href="https://spreadsheets.google.com/spreadsheet/viewform?formkey=dDViT2xzUHAwRkI3X3k5Z0lQM091OGc6MQ&ndplr=1">Individual Contributor License Agreement (CLA)</a>.</p>
+
+            <h3 id="license">License</h3>
+            <pre class="license">Copyright 2013 Square, Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</pre>
+
+            <a id="ribbon" href="https://github.com/square/okhttp"><img src="static/ribbon.png" alt="Fork me on GitHub"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="static/jquery-maven-artifact.min.js"></script>
+    <script src="static/prettify.js"></script>
+    <script>
+      prettyPrint();
+
+      $.fn.artifactVersion('com.squareup', 'okhttp', function(version, url) {
+        $('.version').text(version);
+        $('#download-btn').text('OkHttp v' + version + ' JAR').attr('href', url);
+      });
+    </script>
+  </body>
+</html>
